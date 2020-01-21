@@ -8,7 +8,7 @@ compiler:
 before_script:
     - mkdir build
     - cd build
-    - cmake -G Ninja ..
+    - cmake ..
 
 script:
-    - ninja
+    - make
