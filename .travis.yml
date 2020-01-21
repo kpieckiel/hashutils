@@ -12,3 +12,8 @@ before_script:
 
 script:
     - make
+
+addons:
+    apt:
+        packages:
+            - libcrypto++8 libcrypto++8-dbg libcrypto++-dev
