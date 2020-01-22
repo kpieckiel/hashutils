@@ -5,15 +5,18 @@ compiler:
   - clang
   - gcc
 
+install:
+    - mkdir /tmp/vcpkg
+    - cd /tmp/vcpkg
+    - git clone https://github.com/Microsoft/vcpkg.git
+    - cd vcpkg
+    - ./bootstrap-vcpkg.sh
+    - ./vckpkg install cryptopp
+
 before_script:
     - mkdir build
     - cd build
-    - cmake ..
+    - cmake .. -DCMAKE_TOOLCHAIN_FILE=/tmp/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake
 
 script:
     - make
-
-addons:
-    apt:
-        packages:
-            - libcrypto++-dev
