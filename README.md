@@ -16,6 +16,10 @@ the same interface as the `sha1sum` program found on some POSIX systems.
 - SHA-256 (program `sha256`)
 - SHA-384 (program `sha384`)
 - SHA-512 (program `sha512`)
+- SHA3-224 (program `sha3-224`)
+- SHA3-256 (program `sha3-256`)
+- SHA3-384 (program `sha3-384`)
+- SHA3-512 (program `sha3-512`)
 - SHAKE-128 (program `shake128`)
 - SHAKE-256 (program `shake256`)
 
