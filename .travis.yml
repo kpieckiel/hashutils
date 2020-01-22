@@ -12,10 +12,9 @@ install:
     - git clone https://github.com/Microsoft/vcpkg.git
     - cd vcpkg
     - ./bootstrap-vcpkg.sh -disableMetrics
-    - ./vcpkg integrate install
+    - ./vcpkg install cryptopp
 
 before_script:
-    - vcpkg install cryptopp
     - mkdir build
     - cd build
     - cmake .. -DCMAKE_TOOLCHAIN_FILE=/tmp/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake
