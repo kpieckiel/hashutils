@@ -1,5 +1,6 @@
 dist: bionic
 language: cpp
+sudo: true
 
 compiler:
   - clang
@@ -10,10 +11,11 @@ install:
     - cd /tmp/vcpkg
     - git clone https://github.com/Microsoft/vcpkg.git
     - cd vcpkg
-    - ./bootstrap-vcpkg.sh
-    - vckpkg install cryptopp
+    - ./bootstrap-vcpkg.sh -disableMetrics
+    - ./vcpkg integrate install
 
 before_script:
+    - vckpkg install cryptopp
     - mkdir build
     - cd build
     - cmake .. -DCMAKE_TOOLCHAIN_FILE=/tmp/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake
