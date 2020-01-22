@@ -7,8 +7,7 @@ compiler:
   - gcc
 
 install:
-    - mkdir /tmp/vcpkg
-    - cd /tmp/vcpkg
+    - cd /tmp
     - git clone https://github.com/Microsoft/vcpkg.git
     - cd vcpkg
     - ./bootstrap-vcpkg.sh -disableMetrics
@@ -17,7 +16,7 @@ install:
 before_script:
     - mkdir build
     - cd build
-    - cmake .. -DCMAKE_TOOLCHAIN_FILE=/tmp/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake
+    - cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake
 
 script:
     - make
