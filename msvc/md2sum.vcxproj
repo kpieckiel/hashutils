@@ -159,11 +159,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Private\hashtest\src\utils.cpp" />
     <ClCompile Include="..\src\md2.cpp" />
+    <ClCompile Include="..\src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Private\hashtest\src\utils.hpp" />
+    <ClInclude Include="..\src\utils.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
